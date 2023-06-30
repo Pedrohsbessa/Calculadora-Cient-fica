@@ -1,0 +1,14 @@
+{
+  "name": "calculadora-cient-fica",
+  "version": "1.0.0",
+  "description": "Projeto de calculador científica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pedro",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
