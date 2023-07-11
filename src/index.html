@@ -12,60 +12,92 @@
     <title>Calculadora</title>
 </head>
 
-<body>
-    <div data="container-fluid" class="space-y-3">
-        <div data="row cabecalho" class="flex flex-row space-x-5">
-            <div data="collum-md9" class="flex flex-col m4 sp">
-                <h3 id="titulo" class="font-semibold 1 text-xl">Científica</h3>
-            </div>
-            <div data="collum-md1" id="historico" class="flex flex-col">
-                <h4 id="hist">Histórico</h4>
-            </div>
-            <div data="collum-md1" id="memoria" class="flex flex-col">
-                <h4 id="memo">Memória</h4>
-            </div>
-            <div data="collum-md1" id="branco" class="flex flex-col"></div>
-        </div>
-        <div data="row resultado" class="flex flex-row space-x-3">
-            <div data="collum-md9" class="flex flex-col space-x-3">
-                <div id="resultado2">
-                    <p id="valor2"></p>
-                </div>
-                <div id="resultado1">
-                    <h1 id="valor1" class="font-semibold text-xl">0</h1>
-                </div>
-            </div>
-        </div>
-        <div data="row funcoes2" class="flex flex-row space-x-5">
-            <div id="deg">
-                <span>DEG</span>
-            </div>
-            <div id="hyp">
-                <span>HYP</span>
-            </div>
-            <div id="fe">
-                <span>F-E</span>
-            </div>
-        </div>
-        <div data="row funcoes1" class="flex flex-row space-x-5">
-            <div id="mc-funct">
-                <span>MC</span>
-            </div>
-            <div id="mr-funct">
-                <span>MR</span>
-            </div>
-            <div id="m+-funct">
-                <span>M+</span>
-            </div>
-            <div id="m--funct">
-                <span>M-</span>
-            </div>
-            <div id="ms-funct">
-                <span>Ms</span>
-            </div>
-        </div>
-    </div>
+<body class=" overflow-y-hidden m-2">
+    <div id="global" class="bg-slate-200 flex flex-row gap-1">
+        <section id="right-side" class=" w-4/6 border-r-4 border-slate-300 ">
+            <h1 class="text-2xl p-4">Científica</h1>
+            <div id="resultados" class=" flex flex-col gap-y-5">
+                <div id="resultado2" class="text-right p-3">x</div>
+                <div id="resultado1" class="text-5xl text-right p-3">7777777</div>
 
+            </div>
+            <div id="funcoes-1" class="flex gap-1 m-1 text-center">
+                <span id="deg" class=" w-20 h-10 pt-2 hover:bg-slate-300 ">DEG</span>
+                <span id="hyp" class=" w-20 h-10 pt-2 hover:bg-slate-300 ">HYP</span>
+                <span id="fe" class=" w-20 h-10 pt-2 hover:bg-slate-300">F-E</span>
+            </div>
+            <div id="funcoes-2" class="flex gap-1 m-1 text-center ">
+                <span id="mc" class="w-20 h-10 pt-2 hover:bg-slate-300">MC</span>
+                <span id="mr" class="w-20 h-10 pt-2 hover:bg-slate-300">MR</span>
+                <span id="m-plus" class="w-20 h-10 pt-2 hover:bg-slate-300">M+</span>
+                <span id="m-less" class="w-20 h-10 pt-2 hover:bg-slate-300">M-</span>
+                <span id="ms" class="w-20 h-10 pt-2 hover:bg-slate-300">MS</span>
+            </div>
+            <div id="geral" class="">
+                <div id="corpo-col-1" class="flex m-1 gap-1 text-center">
+                    <span id="x-squad" class="w-20 h-20 pt-6 hover:bg-slate-300 ">X<sup>2</sup></span>
+                    <span id="x-supy" class="w-20 h-20 pt-6 hover:bg-slate-300">X<sup>y</sup></span>
+                    <span id="sin" class="w-20 h-20 pt-6 hover:bg-slate-300">sin</span>
+                    <span id="cos" class="w-20 h-20 pt-6 hover:bg-slate-300">cos</span>
+                    <span id="tan" class="w-20 h-20 pt-6 hover:bg-slate-300">tan</span>
+                    <span id="ce" class="w-20 h-20 pt-6 hover:bg-slate-300">CE</span>
+                    <span id="c" class="w-20 h-20 pt-6 hover:bg-slate-300">C</span>
+                    <span id="delete" class="w-20 h-20 pt-6 hover:bg-slate-300">Del</span>
+                    <span id="divide" class="w-20 h-20 pt-6 hover:bg-slate-300">÷</span>
+                </div>
+                <div id="corpo-col-2" class="flex m-1 gap-1 text-center">
+                    <span id="x-three" class=" w-20 h-20 pt-6 hover:bg-slate-300">X<sup>3</sup></span>
+                    <span id="y-root-x" class=" w-20 h-20 pt-6 hover:bg-slate-300"><sup>y</sup>√<sub>x</sub></span>
+                    <span id="sin-sup-1" class=" w-20 h-20 pt-6 hover:bg-slate-300">sin<sup>-1</sup></span>
+                    <span id="cos-sup-1" class=" w-20 h-20 pt-6 hover:bg-slate-300">cos<sup>-1</sup></span>
+                    <span id="tan-sup-1" class=" w-20 h-20 pt-6 hover:bg-slate-300">tan<sup>-1</sup></span>
+                    <span id="seven" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">7</span>
+                    <span id="eight" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">8</span>
+                    <span id="nine" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">9</span>
+                    <span id="multiply" class=" w-20 h-20 pt-6 hover:bg-slate-300">x</span>
+
+
+                </div>
+                <div id="corpo-col-3" class="flex m-1 gap-1 text-center">
+                    <span id="square-root" class=" w-20 h-20 pt-6 hover:bg-slate-300">√</span>
+                    <span id="ten-sup-x" class=" w-20 h-20 pt-6 hover:bg-slate-300">10<sup>x</sup></span>
+                    <span id="log" class=" w-20 h-20 pt-6 hover:bg-slate-300">log</span>
+                    <span id="exp" class=" w-20 h-20 pt-6 hover:bg-slate-300">Exp</span>
+                    <span id="mod" class=" w-20 h-20 pt-6 hover:bg-slate-300">Mod</span>
+                    <span id="four" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">4</span>
+                    <span id="five" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">5</span>
+                    <span id="six" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">6</span>
+                    <span id="less" class=" w-20 h-20 pt-6 hover:bg-slate-300">-</span>
+                </div>
+                <div id="corpo-col-4" class="flex text-center m-1 gap-1 ">
+                    <span id="one-over-x" class=" w-20 h-20 pt-6 hover:bg-slate-300"><sup>1</sup>/<sub>x</sub></span>
+                    <span id="e-sup-x" class=" w-20 h-20 pt-6 hover:bg-slate-300">e<sup>x</sup></span>
+                    <span id="ln" class=" w-20 h-20 pt-6 hover:bg-slate-300">ln</span>
+                    <span id="dms" class=" w-20 h-20 pt-6 hover:bg-slate-300">dms</span>
+                    <span id="deg" class=" w-20 h-20 pt-6 hover:bg-slate-300">deg</span>
+                    <span id="one" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">1</span>
+                    <span id="two" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">2</span>
+                    <span id="three" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">3</span>
+                    <span id="plus" class=" w-20 h-20 pt-6 hover:bg-slate-300">+</span>
+                </div>
+                <div id="corpo-col-5" class="flex text-center gap-1 m-1">
+                    <span id="up" class=" w-20 h-20 pt-6 hover:bg-slate-300">↑</span>
+                    <span id="pi" class=" w-20 h-20 pt-6 hover:bg-slate-300">π</span>
+                    <span id="n-exclametion" class=" w-20 h-20 pt-6 hover:bg-slate-300">n!</span>
+                    <span id="left-parenthesis" class=" w-20 h-20 pt-6 hover:bg-slate-300">(</span>
+                    <span id="right-parentesis" class=" w-20 h-20 pt-6 hover:bg-slate-300">)</span>
+                    <span id="plus-less" class=" w-20 h-20 pt-6 hover:bg-slate-300">±</span>
+                    <span id="zero" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">0</span>
+                    <span id="comma" class=" w-20 h-20 pt-6 hover:bg-slate-300">,</span>
+                    <span id="result" class="bg-red-500 w-20 h-20 pt-6 hover:bg-red-600">=</span>
+                </div>
+            </div>
+        </section>
+        <section id="left-side" class="w-2/6 flex overflow-auto justify-evenly text-center">
+            <div class="w-1/2 h-8 hover:bg-slate-300"><span class="w-full">Histórico</span></div>
+            <div class="w-1/2 h-8 hover:bg-slate-300"><span class="w-full">Memória</span></div>
+        </section>
+    </div>
 </body>
 
 </html>
