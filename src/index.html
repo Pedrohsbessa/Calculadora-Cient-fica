@@ -12,92 +12,150 @@
     <title>Calculadora</title>
 </head>
 
-<body class=" overflow-y-hidden m-2">
-    <div id="global" class="bg-slate-200 flex flex-row gap-1">
-        <section id="right-side" class=" w-4/6 border-r-4 border-slate-300 ">
-            <h1 class="text-2xl p-4">Científica</h1>
-            <div id="resultados" class=" flex flex-col gap-y-5">
-                <div id="resultado2" class="text-right p-3">x</div>
-                <div id="resultado1" class="text-5xl text-right p-3">7777777</div>
+<body class="float-none overflow-y-hidden text-white">
+    <div id="global" class="flex bg-gray-900">
+        <div id="right-side" class=" w-5/6 flex flex-col ">
+            <header id="title" class="text-xl ml-3">Científica</header>
+            <div id="results" class="flex flex-col bg-gray-900 divide-y divide-gray-500">
+                <div id="result-1" class=" flex justify-end text-end text-base mt-3 mr-1  ">
+                    <p class="text-gray-400">result1</p>
+                </div>
+                <div id="result-2" class="text-end text-2xl  py-3 ">
+                    <h2>result-2</h2>
+                </div>
+            </div>
+            <div id="small-buttons" class="flex flex-col x">
+                <div class="flex flex-row justify-start ">
+                    <button id="deg" type="button" class="basis-1/9 text-sm  m-0.5 h-10 hover:bg-gray-700">DEG</button>
+                    <button id="hyp" type="button" class="basis-1/9 text-sm  m-0.5 h-10 hover:bg-gray-700">HYP</button>
+                    <button id="f-e" type="button" class="basis-1/9 text-sm  m-0.5 h-10 hover:bg-gray-700">F-E</button>
+                </div>
+                <div class="flex flex-row justify-start">
+                    <button id="mc" type="button"
+                        class="basis-1/9 m-0.5 h-10 text-sm text-gray-500 hover:bg-gray-700 hover:text-white">MC</button>
+                    <button id="mr" type="button"
+                        class="basis-1/9 m-0.5 h-10 text-sm text-gray-500 hover:bg-gray-700 hover:text-white">MR</button>
+                    <button id="m-1s" type="button"
+                        class="basis-1/9 m-0.5 h-10 text-sm text-gray-500 hover:bg-gray-700 hover:text-white">M+</button>
+                    <button id="m-1s" type="button" class="basis-1/9 text-sm  m-0.5 h-10 hover:bg-gray-700">M-</button>
+                    <button id="ms" type="button" class="basis-1/9 text-sm  m-0.5 h-10 hover:bg-gray-700">MS</button>
+                </div>
+            </div>
+            <div id="great-buttons" class="flex flex-col m-0.5">
+                <div id="row-1" class="flex flex-row justify-center">
+                    <button id="x-sup-2" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">x<sup>2</sup></button>
+                    <button id="x-sup-y" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">x<sup>y</sup></button>
+                    <button id="sin" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">sin</button>
+                    <button id="cos" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">cos</button>
+                    <button id="tan" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">tan</button>
+                    <button id="ce" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">CE</button>
+                    <button id="c" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">C</button>
+                    <button id="delete" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900"><img
+                            src="./assets/images/apagar.png" alt="Delete" class="ml-10"></button>
+                    <button id="division" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">÷</button>
+                </div>
+                <div id="row-2" class="flex flex-row justify-center">
+                    <button id="x-sup-3" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl hover:bg-gray-700 bg-gray-900">x<sup>3</sup></button>
+                    <button id="y-root-x" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl hover:bg-gray-700 bg-gray-900"><sup>y</sup>√<sub>x</sub></button>
+                    <button id="sin-sup-1" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl hover:bg-gray-700 bg-gray-900">sin<sup>-1</sup></button>
+                    <button id="cos-sup-1" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">cos<sup>-1</sup></button>
+                    <button id="tan-sup-1" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">tan<sup>-1</sup></button>
+                    <button id="seven" type="button"
+                        class="basis-1/9 m-0.5 h-same text-4xl hover:bg-gray-700 bg-slate-800">7</button>
+                    <button id="eight" type="button"
+                        class="basis-1/9 m-0.5 h-same text-4xl hover:bg-gray-700 bg-slate-800">8</button>
+                    <button id="nine" type="button"
+                        class="basis-1/9 m-0.5 h-same text-4xl hover:bg-gray-700 bg-slate-800">9</button>
+                    <button id="multiply" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">x</button>
+                </div>
+                <div id="row-3" class="flex flex-row justify-center">
+                    <button id="root" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">√</button>
+                    <button id="ten-sup-x" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">10<sup>x</sup></button>
+                    <button id="log" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">log</button>
+                    <button id="exp" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">Exp</button>
+                    <button id="mod" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">Mod</button>
+                    <button id="four" type="button"
+                        class="basis-1/9 m-0.5 h-same text-4xl hover:bg-gray-700 bg-slate-800">4</button>
+                    <button id="five" type="button"
+                        class="basis-1/9 m-0.5 h-same text-4xl hover:bg-gray-700 bg-slate-800">5</button>
+                    <button id="six" type="button"
+                        class="basis-1/9 m-0.5 h-same text-4xl hover:bg-gray-700 bg-slate-800">6</button>
+                    <button id="less" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">-</button>
+                </div>
+                <div id="row-4" class="flex flex-row justify-center">
+                    <button id="one-over-x" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900"><sup>1</sup>/<sub>x</sub></button>
+                    <button id="e-sup-x" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">e<sup>x</sup></button>
+                    <button id="ln" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">ln</button>
+                    <button id="dms" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">dms</button>
+                    <button id="deg" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">deg</button>
+                    <button id="one" type="button"
+                        class="basis-1/9 m-0.5 h-same text-4xl hover:bg-gray-700 bg-slate-800">1</button>
+                    <button id="two" type="button"
+                        class="basis-1/9 m-0.5 h-same text-4xl hover:bg-gray-700 bg-slate-800">2</button>
+                    <button id="three" type="button"
+                        class="basis-1/9 m-0.5 h-same text-4xl hover:bg-gray-700 bg-slate-800">3</button>
+                    <button id="plus" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">+</button>
+                </div>
+                <div id="row-5" class="flex flex-row justify-center">
+                    <button id="up" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">↑</button>
+                    <button id="pi" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">π</button>
+                    <button id="n-factor" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">n!</button>
+                    <button id="parentesis-right" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">(</button>
+                    <button id="parentesis-left" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">)</button>
+                    <button id="plus-less" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">±</button>
+                    <button id="zero" type="button"
+                        class="basis-1/9 m-0.5 h-same text-4xl hover:bg-gray-700 bg-gray-800">0</button>
+                    <button id="comma" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl  hover:bg-gray-700 bg-gray-900">,</button>
+                    <button id="equal" type="button"
+                        class="basis-1/9 m-0.5 h-same text-xl hover:bg-red-400 bg-red-600">=</button>
+                </div>
+            </div>
+        </div>
+        <div id="left-side" class=" w-1/6 flex flex-col justify-start text-center bg-gray-900">
+            <div class="flex flex-row justify-evenly">
+                <h1 id="historic" class="hover:bg-gray-700 w-full">Histórico</h1>
+                <h1 id="memo" class="hover:bg-gray-700  w-full">Memória</h1>
+            </div>
+            <div>content</div>
+        </div>
 
-            </div>
-            <div id="funcoes-1" class="flex gap-1 m-1 text-center">
-                <span id="deg" class=" w-20 h-10 pt-2 hover:bg-slate-300 ">DEG</span>
-                <span id="hyp" class=" w-20 h-10 pt-2 hover:bg-slate-300 ">HYP</span>
-                <span id="fe" class=" w-20 h-10 pt-2 hover:bg-slate-300">F-E</span>
-            </div>
-            <div id="funcoes-2" class="flex gap-1 m-1 text-center ">
-                <span id="mc" class="w-20 h-10 pt-2 hover:bg-slate-300">MC</span>
-                <span id="mr" class="w-20 h-10 pt-2 hover:bg-slate-300">MR</span>
-                <span id="m-plus" class="w-20 h-10 pt-2 hover:bg-slate-300">M+</span>
-                <span id="m-less" class="w-20 h-10 pt-2 hover:bg-slate-300">M-</span>
-                <span id="ms" class="w-20 h-10 pt-2 hover:bg-slate-300">MS</span>
-            </div>
-            <div id="geral" class="">
-                <div id="corpo-col-1" class="flex m-1 gap-1 text-center">
-                    <span id="x-squad" class="w-20 h-20 pt-6 hover:bg-slate-300 ">X<sup>2</sup></span>
-                    <span id="x-supy" class="w-20 h-20 pt-6 hover:bg-slate-300">X<sup>y</sup></span>
-                    <span id="sin" class="w-20 h-20 pt-6 hover:bg-slate-300">sin</span>
-                    <span id="cos" class="w-20 h-20 pt-6 hover:bg-slate-300">cos</span>
-                    <span id="tan" class="w-20 h-20 pt-6 hover:bg-slate-300">tan</span>
-                    <span id="ce" class="w-20 h-20 pt-6 hover:bg-slate-300">CE</span>
-                    <span id="c" class="w-20 h-20 pt-6 hover:bg-slate-300">C</span>
-                    <span id="delete" class="w-20 h-20 pt-6 hover:bg-slate-300">Del</span>
-                    <span id="divide" class="w-20 h-20 pt-6 hover:bg-slate-300">÷</span>
-                </div>
-                <div id="corpo-col-2" class="flex m-1 gap-1 text-center">
-                    <span id="x-three" class=" w-20 h-20 pt-6 hover:bg-slate-300">X<sup>3</sup></span>
-                    <span id="y-root-x" class=" w-20 h-20 pt-6 hover:bg-slate-300"><sup>y</sup>√<sub>x</sub></span>
-                    <span id="sin-sup-1" class=" w-20 h-20 pt-6 hover:bg-slate-300">sin<sup>-1</sup></span>
-                    <span id="cos-sup-1" class=" w-20 h-20 pt-6 hover:bg-slate-300">cos<sup>-1</sup></span>
-                    <span id="tan-sup-1" class=" w-20 h-20 pt-6 hover:bg-slate-300">tan<sup>-1</sup></span>
-                    <span id="seven" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">7</span>
-                    <span id="eight" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">8</span>
-                    <span id="nine" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">9</span>
-                    <span id="multiply" class=" w-20 h-20 pt-6 hover:bg-slate-300">x</span>
-
-
-                </div>
-                <div id="corpo-col-3" class="flex m-1 gap-1 text-center">
-                    <span id="square-root" class=" w-20 h-20 pt-6 hover:bg-slate-300">√</span>
-                    <span id="ten-sup-x" class=" w-20 h-20 pt-6 hover:bg-slate-300">10<sup>x</sup></span>
-                    <span id="log" class=" w-20 h-20 pt-6 hover:bg-slate-300">log</span>
-                    <span id="exp" class=" w-20 h-20 pt-6 hover:bg-slate-300">Exp</span>
-                    <span id="mod" class=" w-20 h-20 pt-6 hover:bg-slate-300">Mod</span>
-                    <span id="four" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">4</span>
-                    <span id="five" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">5</span>
-                    <span id="six" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">6</span>
-                    <span id="less" class=" w-20 h-20 pt-6 hover:bg-slate-300">-</span>
-                </div>
-                <div id="corpo-col-4" class="flex text-center m-1 gap-1 ">
-                    <span id="one-over-x" class=" w-20 h-20 pt-6 hover:bg-slate-300"><sup>1</sup>/<sub>x</sub></span>
-                    <span id="e-sup-x" class=" w-20 h-20 pt-6 hover:bg-slate-300">e<sup>x</sup></span>
-                    <span id="ln" class=" w-20 h-20 pt-6 hover:bg-slate-300">ln</span>
-                    <span id="dms" class=" w-20 h-20 pt-6 hover:bg-slate-300">dms</span>
-                    <span id="deg" class=" w-20 h-20 pt-6 hover:bg-slate-300">deg</span>
-                    <span id="one" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">1</span>
-                    <span id="two" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">2</span>
-                    <span id="three" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">3</span>
-                    <span id="plus" class=" w-20 h-20 pt-6 hover:bg-slate-300">+</span>
-                </div>
-                <div id="corpo-col-5" class="flex text-center gap-1 m-1">
-                    <span id="up" class=" w-20 h-20 pt-6 hover:bg-slate-300">↑</span>
-                    <span id="pi" class=" w-20 h-20 pt-6 hover:bg-slate-300">π</span>
-                    <span id="n-exclametion" class=" w-20 h-20 pt-6 hover:bg-slate-300">n!</span>
-                    <span id="left-parenthesis" class=" w-20 h-20 pt-6 hover:bg-slate-300">(</span>
-                    <span id="right-parentesis" class=" w-20 h-20 pt-6 hover:bg-slate-300">)</span>
-                    <span id="plus-less" class=" w-20 h-20 pt-6 hover:bg-slate-300">±</span>
-                    <span id="zero" class="bg-slate-50 w-20 h-20 pt-6 hover:bg-slate-300">0</span>
-                    <span id="comma" class=" w-20 h-20 pt-6 hover:bg-slate-300">,</span>
-                    <span id="result" class="bg-red-500 w-20 h-20 pt-6 hover:bg-red-600">=</span>
-                </div>
-            </div>
-        </section>
-        <section id="left-side" class="w-2/6 flex overflow-auto justify-evenly text-center">
-            <div class="w-1/2 h-8 hover:bg-slate-300"><span class="w-full">Histórico</span></div>
-            <div class="w-1/2 h-8 hover:bg-slate-300"><span class="w-full">Memória</span></div>
-        </section>
     </div>
+
+
 </body>
 
 </html>
