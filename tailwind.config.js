@@ -8,9 +8,15 @@ module.exports = {
         '1/10': '10%'
       },
       height: {
-        'same': '100px',
+        'same': '90px',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('child', '&>*');
+      addVariant('child-active', '& > :active');
+    },
+
+  ]
 }
